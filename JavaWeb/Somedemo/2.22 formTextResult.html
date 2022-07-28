@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function show(val){
+				document.myform.result.value = val;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="POST" name="myform">
+			Dept: <select name="dept" onchange="show(this.value)">  //onChange 改变就触发
+				<option value="Tech">Tech</option>
+				<option value="Sal">Sal</option>
+				<option value="Money">Money</option>
+			</select>
+			Result: <input type="text" name="result" value="">
+		</form>
+	</body>
+</html>

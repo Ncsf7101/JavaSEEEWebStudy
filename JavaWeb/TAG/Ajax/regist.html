@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script language="JavaScript">
+			var xmlHttp;
+			var flag;
+			function createXMLHttp(){
+				if(window.XMLHttpRequest){
+					xmlHttp = new XMLHttpRequest();
+				}else{
+					xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+			}
+			
+			function checkUserid(userid){
+				createXMLHttp();
+				xmlHttp.onreadystatechange = checkUseridCallback;
+				xmlHttp.open("GET", "CheckServlet?userid=" + userid);
+				xmlHttp.send(null);
+				document.getElementById("msg").innerHTML = "正在验证...";
+			}
+			
+			function checkUseridCallback(){
+				if(xmlHttp.readyState == 4){
+					if(xmlHttp.status == 200){
+						var text = xmlHttp.responseText;
+						if(text == "true"){
+							document.getElementById("msg").innerHTML = "用户ID重复，无法使用";
+							flag = false;
+						}else{
+							flag = true;
+							document.getElementById("msg").innerHTML = "此用户ID可以注册";
+						}
+					}
+				}
+			}
+			
+			function checkForm(){
+				return flag;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="regist.html" method="post" onsubmit="return checkForm()">
+			用户ID:<input type="text" name="userid" onblur="checkUserid(this.value)"/>
+			<span id="msg"></span><br />
+			姓&nbsp;&nbsp;名:<input type="text" name="name"/>
+			密&nbsp;&nbsp;码:<input type="password" name="pwd"/>
+			<input type="submit" value="注册"/>
+			<input type="reset" value="重置"/>
+		</form>
+	</body>
+</html>

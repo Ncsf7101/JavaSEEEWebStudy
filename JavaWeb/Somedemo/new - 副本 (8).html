@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function fun(url){
+				//window.open(url, "跳转页面", "width=470,height=150,scrollbars=yes,resizable=no");
+				window.location = url;
+			}
+		</script>
+	</head>
+	<body>
+		<select name="url" onChange="fun(this.value)">
+			<option value="#">==选择要浏览的站点==</option>
+			<option value="2.20 formvalidate.html">formvalidate</option>
+			<option value="2.21 formArrayChecked.html">formArrayChecked</option>
+			<option value="2.22 formTextResult.html">formTextResult</option>
+		</select>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script language="JavaScript">
+			function setFun(){
+				var id = new Array(1, 2, 3);
+				var value = new Array("北京", "南京", "上海");
+				var select = document.getElementById("area");
+				select.length = 1;   //每次只能选择一个
+				select.options[0].selected = true;  //默认选项
+				for(var i=0; i<id.length; i++){
+					var option = document.createElement("option");
+					option.setAttribute("value", id[i]);
+					option.appendChild(document.createTextNode(value[i]));
+					select.appendChild(option);
+				}
+			}
+		</script>
+	</head>
+	<body onload="setFun()">
+		<form>	
+			<select name="area" id="area">
+				<option value="0">没有地区</option>
+			</select>
+		</form>
+	</body>
+</html>

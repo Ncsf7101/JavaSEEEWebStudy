@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function validate(f){
+				//var value = f.email.value;
+				var value = document.myform.email.value;
+				if(!/^\w+@\w+.\w+$/.test(value)){
+					alert("Email输入格式有误");
+					f.email.focus();
+					f.email.select();
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+		
+	<body>
+		<form action="" method="POST" name="myform" onsubmit="return validate(this)">
+			EMAIL: <input type="text" name="email" />
+				   <input type="submit" value="提交"/>  //填写完form数据后提交至函数
+		</form>
+	</body>
+</html>

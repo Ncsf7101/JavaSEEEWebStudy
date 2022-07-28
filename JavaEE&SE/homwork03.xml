@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dept>
+    <emp>
+        <empno>1111</empno>
+        <ename>rqiang</ename>
+        <job>经理</job>
+        <hiredate>Sun Jul 03 00:00:00 CST 2022</hiredate>
+        <sal>6000.1</sal>
+    </emp>
+    <emp>
+        <empno>1542</empno>
+        <ename>玻璃</ename>
+        <job>副经理</job>
+        <hiredate>Sun Jul 03 00:00:00 CST 2022</hiredate>
+        <sal>4000.1</sal>
+    </emp>
+    <emp>
+        <empno>1213</empno>
+        <ename>占哥</ename>
+        <job>销售</job>
+        <hiredate>Sun Jul 03 00:00:00 CST 2022</hiredate>
+        <sal>4000.1</sal>
+    </emp>
+    <emp>
+        <empno>5415</empno>
+        <ename>rqiang</ename>
+        <job>后勤</job>
+        <hiredate>Sun Jul 03 00:00:00 CST 2022</hiredate>
+        <sal>4000.1</sal>
+    </emp>
+    <emp>
+        <empno>6657</empno>
+        <ename>玻璃璃</ename>
+        <job>打杂</job>
+        <hiredate>Sun Jul 03 00:00:00 CST 2022</hiredate>
+        <sal>4000.1</sal>
+    </emp>
+    <emp>
+        <empno>7788</empno>
+        <ename>字体</ename>
+        <job>老板</job>
+        <hiredate>Sun Jul 03 00:00:00 CST 2022</hiredate>
+        <sal>8000.1</sal>
+    </emp>
+</dept>

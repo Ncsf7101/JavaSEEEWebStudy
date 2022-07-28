@@ -1,0 +1,34 @@
+<%@ page contentType="text/html; charset=utf-8"%>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>login</title>
+	</head>
+	<body>
+		<h1>登陆操作</h1>
+		<hr>
+		<form action="login_check.jsp" method="POST">
+			<table border="1">
+				<tr>
+						<td colspan="2">
+							<center>用户登录</center>
+						</td>
+				</tr>
+				<tr>
+					<td>登录账号:&nbsp;</td>
+					<td><input type="text" name="userid"></td>
+				</tr>
+				<tr>
+					<td>登录密码:&nbsp;</td>
+					<td><input type="password" name="userpwd"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="登录">
+						<input type="reset" value="重置">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

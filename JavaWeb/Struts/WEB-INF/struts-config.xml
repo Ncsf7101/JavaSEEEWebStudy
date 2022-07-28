@@ -1,0 +1,39 @@
+<?xml  version="1.0"  encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+<struts-config>     
+     <form-beans>
+		<form-bean name="helloForm" type="com.rqiang.struts.HelloForm"/>
+		<form-bean name="simpleForm" type="com.rqiang.struts.SimpleForm"/>
+		<form-bean name="tokenforwardForm" type="com.rqiang.struts.TokenforwardForm"/>
+		<form-bean name="inputForm" type="com.rqiang.struts.InputForm"/>
+		<form-bean name="uploadForm" type="com.rqiang.struts.UploadForm"/>
+	 </form-beans>
+	 <global-exceptions/>
+     <global-forwards/>
+     <action-mappings>
+		<action attribute="helloForm" input="/struts/hello.jsp"
+			name="helloForm" path="/struts/hello" scope="request"
+			type="com.rqiang.struts.HelloAction">
+			<forward name="show" path="/struts/hello.jsp"></forward>
+		</action>
+		<action attribute="simpleForm" input="/struts/input_simple.jsp"
+			name="simpleForm" path="/struts/simple" scope="request"
+			type="com.rqiang.struts.SimpleAction">
+		</action>
+		<action attribute="tokenforwardForm" input="/struts/input.jsp"
+			name="tokenforwardForm" path="/struts/tokenforward" scope="request"
+			type="com.rqiang.struts.TokenforwardAction">
+			<forward name="input" path="/struts/input.jsp"></forward>
+		</action>
+		<action attribute="inputForm" input="/struts/input.jsp"
+			name="inputForm" path="/struts/input" scope="request"
+			type="com.rqiang.struts.InputAction">
+		</action>
+		<action attribute="uploadForm" input="/struts/upload.jsp"
+			name="uploadForm" path="/struts/upload" scope="request"
+			type="com.rqiang.struts.UploadAction">
+		</action>
+	 </action-mappings>
+     <message-resources parameter="com.rqiang.struts.ApplicationResources"/>
+</struts-config>

@@ -1,0 +1,23 @@
+<html>
+<head>
+	<TITLE>WWW.BAIDU.COM</TITLE>
+	<script language="JavaScript">
+		function show(){
+			var value = document.myform.name.value;
+			if(/^\w+@\w+.\w+$/.test(value)){
+				alert("输入内容是: " + value);
+			}else{
+				alert("输入有误");
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<form action="" methom="post" name="myform">
+	请输入内容: <input type="text" name="name">
+	<input type="button" value="显示" onclick="show()">
+	
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<addresslist>
+	<linkman>
+		<name>man</name>
+		<email>1@1.com</email>
+	</linkman>
+	<linkman>
+		<name>woman</name>
+		<email>2@2.com</email>
+	</linkman>
+</addresslist>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<script language="JavaScript">
+			var count = 2;
+			function addrow(){
+				var table = document.getElementById("mytable");
+				var tr = table.insertRow();
+				var td1 = tr.insertCell();
+				var td2 = tr.insertCell();
+				var td3 = tr.insertCell();
+				td1.innerHTML = "Rqiang_Zou" + count;
+				td2.innerHTML = "Boli_li" + count;
+				td3.innerHTML = "<input type='button' value='-' onclick='deleterow(this)' />";
+				count++;
+			}	
+			function deleterow(btn){
+				var tr = btn.parentNode.parentNode; //获得tr
+				var table = document.getElementById("mytable");
+				table.deleteRow(tr.rowIndex);
+				
+			}
+		
+		</script>
+	</head>
+	<body>
+		<input type="button" value="+" onclick="addrow()" />
+		<table id="mytable" border="1">
+			<tr>
+				<td>11</td>
+				<td>22</td>
+				<td><input type="button" value="-" onclick="deleterow(this)" /></td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function fun(url){
+				window.open(url, "选择页面", "width=470,height=150,scrollbars=yes,resizable=no");
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="POST" name="myform">
+			网站： <select name="url" onchange="fun(this.value)">
+				<option value="2.20 formvalidate.html">formvalidate</option>
+				<option value="2.21 formArrayChecked.html">formArrayChecked</option>
+				<option value="2.22 formTextResult.html">formTextResult</option>
+			</select>
+		</form>
+	</body>
+</html>

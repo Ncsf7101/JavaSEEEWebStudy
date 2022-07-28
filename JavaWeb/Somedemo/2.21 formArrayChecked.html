@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function show(){
+				var name = document.myform.name.value;
+				alert("Name: " + name);
+				var sex;
+				if(document.myform.sex[0].checked){
+					sex = document.myform.sex[0].value;
+				}else{
+					sex = document.myform.sex[1].value;
+				}
+				alert("sex: " + sex);
+				var habit = "";
+				for(i = 0; i<document.myform.hab.length; i++){
+					if(document.myform.hab[i].checked){
+						habit += document.myform.hab[i].value + "、";
+					}
+				}
+				alert("Habit: " + habit);
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="POST" name="myform">
+			Name: <input type="text" name="name"/><br />
+			Gander: <input type="radio" name="sex" value="man" checked/>man
+					<input type="radio" name="sex" value="woman" checked/>woman<br />
+			Habit: <input type="checkbox" name="hab" value="Sing"/>Sing
+				 <input type="checkbox" name="hab" value="Swing"/>Swing
+				 <input type="checkbox" name="hab" value="Dance"/>Dance
+				 <input type="checkbox" name="hab" value="Programmer"/>Programmer
+				 <input type="checkbox" name="hab" value="Surf"/>Surf Internet<br />
+			<input type="button" value="显示" onclick="show()"/><br />  //触发函数选项
+		</form>
+	</body>
+</html>

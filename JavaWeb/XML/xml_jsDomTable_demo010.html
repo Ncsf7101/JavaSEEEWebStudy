@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<script language="JavaScript">
+			function add(){
+				var tab = document.getElementById("mytable");
+				var id = document.getElementById("id").value;
+				var name = document.getElementById("name").value;
+				var tr = document.createElement("tr");
+				var tbody = document.createElement("tbody");
+				var td_id = document.createElement("td");
+				var td_name = document.createElement("td");
+				td_id.appendChild(document.createTextNode(id));
+				td_name.appendChild(document.createTextNode(name));
+				tr.appendChild(td_id);
+				tr.appendChild(td_name);
+				tbody.appendChild(tr);
+				tab.appendChild(tbody);
+			}
+			
+		
+		</script>
+	</head>
+	<body>
+		姓名: <input type="text" id="name"><br>
+		编号: <input type="text" id="id"><br>
+		<input type="button" value="增加" onclick="add()">
+		<table id="mytable" border="1">
+			<tr>
+				<td>姓名</td>
+				<td>编号</td>
+			</tr>
+		</table>
+	</body>
+</html>

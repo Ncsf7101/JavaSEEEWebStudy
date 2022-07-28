@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<?xml-stylesheet type="text/css" href="xml_demo03.css"?>
+<addresslist>
+	<linkman>
+		<name>玻璃璃</name>
+		<id>001</id>
+		<company>鸿运</company>
+		<email>ncsf7101@gmail.com</email>
+		<tel>17607087150</tel>
+		<site>www.baidu.com</site> 
+	</linkman>
+</addresslist>
